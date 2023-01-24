@@ -22,7 +22,7 @@ jobs:
           distribution: 'adopt'
                                  
       - name: Build Exercicio DXC Jar
-        working-directory: exercicio-dxc
+        working-directory: ./
         run: mvn clean package -DskipTests
       
       - name: Docker Compose Build

@@ -30,7 +30,7 @@ services:
     restart: always
     build:
       context: .
-      dockerfile: /Dockerfile
+      dockerfile: Dockerfile
     environment:
       TZ: America/Sao_Paulo
     ports:

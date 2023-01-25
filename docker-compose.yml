@@ -1,16 +1,20 @@
+version: "3"
 
-rabbitmq:
-  image: rabbitmq:3.11-management
-  ports:
-    - "5672:5672" # AMQP protocol port
-    - "15672:15672" # HTTP management UI
+services:
+  rabbitmq:
+    image: rabbitmq:3.11-management
+    ports:
+      - 5672:5672
+      - 15672:15672 
 
-exercicio-dxc:
-  image: emersondiaspd/exercicio-dxc:0.0.1-SNAPSHOT
-  links:
-    - rabbitmq
-  ports:
-    #  local : container expose
-    - "8181:8181"
-  environment:
-    RABBIT_HOST: rabbitmq
+  exercicio-dxc:
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - 8181:8181
+    environment:
+      - SPRING_RABBITMQ_HOST=rabbitmq
+    depends_on:
+      - rabbitmq
+      
+      

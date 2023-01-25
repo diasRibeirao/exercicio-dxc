@@ -5,8 +5,9 @@
 ### Clonar o respositório: <br />
 git clone https://github.com/diasRibeirao/exercicio-dxc.git<br />
 
-### Subir a aplicação, no caso do windows (O Docker Desktop deve estar instalado), executar o powershell e ir até o diretório do projeto clonado, ex: /opt/fontes/exercicio-dxc<br />
-Executar o comando ## exercicio-dxc ## <br />
+#### Subir a aplicação, no caso do windows (O Docker Desktop deve estar instalado), executar o powershell e ir até o diretório do projeto clonado, ex: /opt/fontes/exercicio-dxc<br />
+Executar o comando: <br />
+#### docker-compose up -d <br />
 Aguardar a aplicação subir, e seguir os os comandos a seguir<br />
 
 <br /><br />

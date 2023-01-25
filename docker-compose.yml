@@ -10,7 +10,7 @@ services:
         - "5672:5672"
 
     exercicio-dxc:                        
-      image: exercicio-dxc              
+      image: emersondiaspd/exercicio-dxc:0.0.1-SNAPSHOT         
       container_name: exercicio-dxc
       build:
         context: .                          
